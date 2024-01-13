@@ -37,8 +37,8 @@ const FoodTable = ({ list }) => {
     setScrollToEnd(true);
   };
 
-  const sort = () => {
-    setTimeout(() => {
+  const sort = (withChanges = true) => {
+    const update = () => {
       setSortedData(
         [...filteredData].sort((a, b) => {
           const aValue = a["quantity"];
@@ -46,7 +46,16 @@ const FoodTable = ({ list }) => {
           return sortBy === "asc" ? aValue - bValue : bValue - aValue;
         })
       );
-    }, 100);
+    }
+
+    if (withChanges) {
+      setTimeout(() => {
+        update()
+      }, 100);
+    } else {
+      update()
+    }
+    
   };
 
   /* USE EFFECTS */
@@ -64,7 +73,7 @@ const FoodTable = ({ list }) => {
   }, [sortBy]);
 
   useEffect(() => {
-    sort();
+    sort(false);
   }, [filteredData]);
 
   useEffect(() => {
@@ -132,7 +141,7 @@ const FoodTable = ({ list }) => {
       return item;
     });
 
-    setData(newData);
+    setData([...newData]);
   };
 
   const handleSort = () => {

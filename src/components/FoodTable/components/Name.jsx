@@ -3,7 +3,6 @@ const Name = ({ name, index, handleChange }) => {
     <input
       type="text"
       value={name}
-      placeholder={name ? "" : "Nombre del alimento..."}
       onChange={(e) => handleChange("name", e.target.value, index)}
     />
   );
