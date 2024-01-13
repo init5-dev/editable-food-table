@@ -1,0 +1,123 @@
+table {
+  border-collapse: collapse;
+  margin-top: 20px;
+  width: 100%;
+}
+
+th {
+  background-color: #344a61;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  padding: 8px;
+}
+
+td input {
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  width: 10rem;
+}
+
+td input[type="number"] {
+  width: 5rem;
+  text-align: center;
+}
+
+select {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  background: url("data:image/svg+xml, <svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+    no-repeat;
+  background-position: calc(100% - 0.35rem) center !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 1.05rem !important;
+  outline: 0 !important;
+}
+
+td select {
+  background-color: transparent;
+}
+
+tr {
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+label {
+  margin-right: 10px;
+}
+
+.flex-div {
+  display: flex;
+  align-items: center;
+  column-gap: 0.4rem;
+  max-height: 1.25rem;
+}
+
+.filter-btn {
+  width: 1.1rem;
+  max-height: 1.5rem;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.filter-btn:active {
+  box-shadow: inset 0px 0px 2px #111111;
+}
+
+.btn {
+  border-radius: 4px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0px 4px;
+  padding: 4px 8px;
+  text-align: center;
+}
+
+.btn:active {
+  box-shadow: inset 0px 0px 2px #111111;
+}
+
+.add-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #000000;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  text-align: center;
+}
+
+.popup p {
+  margin-bottom: 20px;
+}
+
+.transparent {
+  background-color: transparent;
+}
